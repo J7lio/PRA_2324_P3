@@ -1,11 +1,6 @@
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
 
-
-#include <typeinfo>
-
-
-
 #include <ostream>
 #include <stdexcept>
 #include "Dict.h"
@@ -44,7 +39,7 @@ class HashTable: public Dict<V> {
 		}
 
 		friend std::ostream& operator<<(std::ostream &out, const HashTable<V> &th){
-			out << "HashTable [entries: " << th.n <<", capacity, " << th.max <<"]" << std::endl << "==============";
+			out << "HashTable [entries: " << th.n << ", capacity, " << th.max <<"]" << std::endl << "==============";
 			for(int i = 0; i < th.max; i++){
 				out << "\n\n" << "== Cubeta " << i << " ==" << "\n\n";
 				out << th.table[i];
